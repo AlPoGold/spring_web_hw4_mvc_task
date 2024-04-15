@@ -1,0 +1,59 @@
+
+* {
+    width: 70%;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+
+}
+
+h1 {
+    color:#4f624d;
+
+}
+h1, h2, table, form {
+    margin-bottom: 20px;
+}
+
+
+body {
+    background-image: url('./img/flat-lay-blank-clipboard-with-orange-background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 0 auto;
+    border: 1mm solid darkgreen;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid darkgreen;
+}
+
+form {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #006400;
+}
