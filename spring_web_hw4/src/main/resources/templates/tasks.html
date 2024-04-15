@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<h2>List of tasks</h2>
+
+<table id="listOfTasks">
+    <tr>
+        <th>DESCRIPTION</th>
+        <th>PRIORITY</th>
+        <th>TO DATE</th>
+    </tr>
+    <tr th:each="t: ${tasks}" >
+        <td th:text="${t.description}"></td>
+        <td th:text="${t.priority}"></td>
+        <td th:text="${#dates.format(t.finishingDate, 'dd-MM-yyyy')}"></td>
+
+    </tr>
+</table>
+
+<h2>Add a task</h2>
+<form action="/tasks" method="post">
+    Description: <input type="text" name="description"><br />
+    Priority:
+    <select name="level">
+        <option value="HIGH">High</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="LOW">Low</option>
+    </select><br />
+    To Date: <input type="date" step="any" name="finishingDate" pattern="yyyy-MM-dd"><br />
+    <button type="submit">ADD</button>
+</form>
+</body>
+</html>
